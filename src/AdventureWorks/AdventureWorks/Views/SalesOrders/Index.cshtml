@@ -16,40 +16,60 @@
     <tr>
         <td width="240px">
             <!-- sales order info -->
-            @Html.DisplayNameFor(model => model.SalesOrderNumber):
+            <span class="label">
+                @Html.DisplayNameFor(model => model.SalesOrderNumber):
+            </span>
             <a href="SalesOrders/GetOrderDetails#@item.SalesOrderID">@item.SalesOrderNumber</a>
             <br />
-            @Html.DisplayNameFor(model => model.AccountNumber):
+            <span class="label">
+                @Html.DisplayNameFor(model => model.AccountNumber):
+            </span>
             @Html.DisplayFor(modelItem => item.AccountNumber)
             <br />
-            @Html.DisplayNameFor(model => model.CustomerID):
+            <span class="label">
+                @Html.DisplayNameFor(model => model.CustomerID):
+            </span>
             @Html.DisplayFor(modelItem => item.CustomerID)
         </td>
         <td>
             <!-- shipping info -->
-            @Html.DisplayNameFor(model => model.ShipDate):
+            <span class="label">
+                @Html.DisplayNameFor(model => model.ShipDate):
+            </span>
             @Html.DisplayFor(modelItem => item.ShipDate)
             <br />
-            @Html.DisplayNameFor(model => model.ShipToAddressID):
+            <span class="label">
+                @Html.DisplayNameFor(model => model.ShipToAddressID):
+            </span>
             @Html.DisplayFor(modelItem => item.ShipToAddressID)
             <br />
-            @Html.DisplayNameFor(model => model.ShipMethodID):
+            <span class="label">
+                @Html.DisplayNameFor(model => model.ShipMethodID):
+            </span>
             @Html.DisplayFor(modelItem => item.ShipMethodID)
-        </td>
+</td>
         <td>
             <!-- cost -->
-            @Html.DisplayNameFor(model => model.SubTotal):
+            <span class="label">
+                @Html.DisplayNameFor(model => model.SubTotal):
+            </span>
             @Html.DisplayFor(modelItem => item.SubTotal)
-            <br />            
-            @Html.DisplayNameFor(model => model.TaxAmount):
+            <br />
+            <span class="label">
+                @Html.DisplayNameFor(model => model.TaxAmount):
+            </span>
             @Html.DisplayFor(modelItem => item.TaxAmount)
             <br />
-            @Html.DisplayNameFor(model => model.Freight):
+            <span class="label">
+                @Html.DisplayNameFor(model => model.Freight):
+            </span>
             @Html.DisplayFor(modelItem => item.Freight)
             <br />
-            @Html.DisplayNameFor(model => model.TotalDue):
+            <span class="label">
+                @Html.DisplayNameFor(model => model.TotalDue):
+            </span>
             @Html.DisplayFor(modelItem => item.TotalDue)
-        </td>
+</td>
     </tr>
 }
 

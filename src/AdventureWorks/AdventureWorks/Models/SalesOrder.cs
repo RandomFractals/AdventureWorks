@@ -9,24 +9,24 @@ namespace AdventureWorks.Models
     {
         public int SalesOrderID { get; set; }
 
-        [Display(Name = "Sales Order")]
+        [Display(Name = "sales order")]
         public string SalesOrderNumber { get; set; }
 
-        [Display(Name = "Purchase Order")]
+        [Display(Name = "purchase order")]
         public string PurchaseOrderNumber { get; set; }
 
-        [Display(Name = "Account")]
+        [Display(Name = "account")]
         public string AccountNumber { get; set; }
 
-        [Display(Name = "Customer ID")]
+        [Display(Name = "customer ID")]
         public int CustomerID { get; set; }
 
-        [Display(Name = "Created")]
+        [Display(Name = "created")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime OrderDate { get; set; }
 
-        [Display(Name = "Due")]
+        [Display(Name = "due")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DueDate { get; set; }
@@ -58,7 +58,7 @@ namespace AdventureWorks.Models
         [DisplayFormat(DataFormatString = "{0:C}")]
         public decimal TotalDue { get; set; }
 
-        [Display(Name = "Modified")]
+        [Display(Name = "modified")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime ModifiedDate { get; set; }
