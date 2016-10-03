@@ -28,5 +28,13 @@ namespace AdventureWorks.Controllers
         {
             return View(this._ordersRepo.GetSalesOrders());
         }
+
+        // GET: SalesOrderDetails
+        public ActionResult GetOrderDetails(int orderId)
+        {
+            return View( this._ordersRepo.GetSalesOrderDetails(orderId) );
+        }
+
+
     }
 }
