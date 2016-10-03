@@ -31,12 +31,12 @@ namespace AdventureWorks.Models.SalesOrder
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DueDate { get; set; }
 
-        [Display(Name = "Ship")]
+        [Display(Name = "Ship On")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime ShipDate { get; set; }
 
-        [Display(Name = "Ship To")]
+        [Display(Name = "To")]
         public int ShipToAddressID { get; set; }
 
         [Display(Name = "Via")]
