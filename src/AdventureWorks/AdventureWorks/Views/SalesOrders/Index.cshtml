@@ -8,16 +8,7 @@
 <table class="table">
     <tr>
         <th>Sales Order</th>
-        <th>Shipping</th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShipDate)
-        </th>        
-        <th>
-            @Html.DisplayNameFor(model => model.ShipToAddressID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShipMethodID)
-        </th>
+        <th>Shipping Info</th>        
         <th>
             @Html.DisplayNameFor(model => model.SubTotal)
         </th>
@@ -35,6 +26,7 @@
 @foreach (var item in Model) {
     <tr>
         <td width="240px">
+            <!-- sales order info -->
             @Html.DisplayNameFor(model => model.SalesOrderNumber):
             <a href="SalesOrders/GetOrderDetails#@item.SalesOrderID">@item.SalesOrderNumber</a>
             <br />
@@ -45,13 +37,15 @@
             @Html.DisplayFor(modelItem => item.CustomerID)
         </td>
         <td>
+            <!-- shipping info -->
+            @Html.DisplayNameFor(model => model.ShipDate):
             @Html.DisplayFor(modelItem => item.ShipDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShipMethodID)
-        </td>
-        <td>
+            <br />
+            @Html.DisplayNameFor(model => model.ShipToAddressID):
             @Html.DisplayFor(modelItem => item.ShipToAddressID)
+            <br />
+            @Html.DisplayNameFor(model => model.ShipMethodID):
+            @Html.DisplayFor(modelItem => item.ShipMethodID)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.SubTotal)

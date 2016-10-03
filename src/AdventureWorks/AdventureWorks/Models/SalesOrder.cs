@@ -31,7 +31,7 @@ namespace AdventureWorks.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DueDate { get; set; }
 
-        [Display(Name = "Ship On")]
+        [Display(Name = "Shipping")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime ShipDate { get; set; }
