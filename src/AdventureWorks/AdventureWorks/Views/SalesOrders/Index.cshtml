@@ -13,7 +13,7 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr class="card-row">
         <td width="240px">
             <!-- sales order info -->
             <span class="label">
@@ -47,7 +47,7 @@
                 @Html.DisplayNameFor(model => model.ShipMethodID):
             </span>
             @Html.DisplayFor(modelItem => item.ShipMethodID)
-</td>
+        </td>
         <td>
             <!-- cost -->
             <span class="label">
@@ -69,7 +69,7 @@
                 @Html.DisplayNameFor(model => model.TotalDue):
             </span>
             @Html.DisplayFor(modelItem => item.TotalDue)
-</td>
+        </td>
     </tr>
 }
 

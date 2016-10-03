@@ -26,3 +26,7 @@ textarea {
 .label {
     color: #666;
 }
+
+.card-row {
+    border: 1px solid #999;
+}
