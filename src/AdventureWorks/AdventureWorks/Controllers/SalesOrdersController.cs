@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-using AdventureWorks.Models.SalesOrder;
+using AdventureWorks.Models;
 using AdventureWorks.Repository;
 
 

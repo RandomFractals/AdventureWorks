@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace AdventureWorks.Models.SalesOrder
+namespace AdventureWorks.Models
 {
 
     public class SalesOrderDetails

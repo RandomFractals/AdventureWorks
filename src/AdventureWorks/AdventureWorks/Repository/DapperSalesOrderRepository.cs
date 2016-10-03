@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 using Dapper;
 
-using AdventureWorks.Models.SalesOrder;
+using AdventureWorks.Models;
 
 namespace AdventureWorks.Repository
 {
