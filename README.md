@@ -10,3 +10,6 @@ https://msftdbprodsamples.codeplex.com/releases/view/125550
 
 - Run Sales.GetSalesOrders.sql and Sales.GetSalesOrderDetails.sql stored procs create from ./data/procs
 
+# Build Instructions
+
+Open .src/AdventureWorks/AdventureWorks.sln in your VS2015, build and run!
