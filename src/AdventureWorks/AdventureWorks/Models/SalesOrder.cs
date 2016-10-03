@@ -31,15 +31,15 @@ namespace AdventureWorks.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DueDate { get; set; }
 
-        [Display(Name = "On")]
+        [Display(Name = "on")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime ShipDate { get; set; }
 
-        [Display(Name = "To")]
+        [Display(Name = "to")]
         public int ShipToAddressID { get; set; }
 
-        [Display(Name = "Via")]
+        [Display(Name = "via")]
         public int ShipMethodID { get; set; }
 
         [Display(Name = "SubTotal ($)")]
