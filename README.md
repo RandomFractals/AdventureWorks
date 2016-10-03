@@ -13,3 +13,8 @@ https://msftdbprodsamples.codeplex.com/releases/view/125550
 # Build Instructions
 
 Open .src/AdventureWorks/AdventureWorks.sln in your VS2015, build and run!
+
+# Latest Build View :(
+
+![Alt text](https://github.com/RandomFractals/AdventureWorks/blob/master/screens/AWSO-0.0.1-Trimmed.png
+ "It's a start!")
