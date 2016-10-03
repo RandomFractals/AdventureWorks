@@ -22,12 +22,18 @@ namespace AdventureWorks.Models.SalesOrder
         public int CustomerID { get; set; }
 
         [Display(Name = "Created")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime OrderDate { get; set; }
 
         [Display(Name = "Due")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DueDate { get; set; }
 
         [Display(Name = "Ship")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime ShipDate { get; set; }
 
         [Display(Name = "Ship To")]
@@ -54,6 +60,8 @@ namespace AdventureWorks.Models.SalesOrder
         public decimal TotalDue { get; set; }
 
         [Display(Name = "Modified")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime ModifiedDate { get; set; }
 
 
