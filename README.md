@@ -8,4 +8,5 @@ Asp.Net MVC 5/Dapper AdventureWorks Sales Orders Sample App
 
 https://msftdbprodsamples.codeplex.com/releases/view/125550
 
+- Run Sales.GetSalesOrders.sql and Sales.GetSalesOrderDetails.sql stored procs create from ./data/procs
 
