@@ -42,20 +42,19 @@ namespace AdventureWorks.Models
         [Display(Name = "via")]
         public int ShipMethodID { get; set; }
 
-        [Display(Name = "SubTotal ($)")]
+        [Display(Name = "subtotal")]
         [DisplayFormat(DataFormatString = "{0:C}")]
         public decimal SubTotal { get; set; }
 
-        [Display(Name = "Tax ($)")]
+        [Display(Name = "tax")]
         [DisplayFormat(DataFormatString = "{0:C}")]
         public decimal TaxAmount { get; set; }
 
-        [Display(Name = "Freight ($)")]
+        [Display(Name = "freight")]
         [DisplayFormat(DataFormatString = "{0:C}")]
         public decimal Freight { get; set; }
 
-
-        [Display(Name = "Total ($)")]
+        [Display(Name = "total")]
         [DisplayFormat(DataFormatString = "{0:C}")]
         public decimal TotalDue { get; set; }
 

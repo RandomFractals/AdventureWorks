@@ -9,18 +9,7 @@
     <tr>
         <th>Sales Order</th>
         <th>Shipping</th>        
-        <th>
-            @Html.DisplayNameFor(model => model.SubTotal)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TaxAmount)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Freight)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TotalDue)
-        </th>
+        <th>Cost ($)</th>
     </tr>
 
 @foreach (var item in Model) {
@@ -48,15 +37,17 @@
             @Html.DisplayFor(modelItem => item.ShipMethodID)
         </td>
         <td>
+            <!-- cost -->
+            @Html.DisplayNameFor(model => model.SubTotal):
             @Html.DisplayFor(modelItem => item.SubTotal)
-        </td>
-        <td>
+            <br />            
+            @Html.DisplayNameFor(model => model.TaxAmount):
             @Html.DisplayFor(modelItem => item.TaxAmount)
-        </td>
-        <td>
+            <br />
+            @Html.DisplayNameFor(model => model.Freight):
             @Html.DisplayFor(modelItem => item.Freight)
-        </td>
-        <td>
+            <br />
+            @Html.DisplayNameFor(model => model.TotalDue):
             @Html.DisplayFor(modelItem => item.TotalDue)
         </td>
     </tr>
