@@ -17,7 +17,8 @@ namespace AdventureWorks.Repository
 	{
         private SqlConnection GetConnection()
         {
-            string sqlConString = ConfigurationManager.ConnectionStrings["SqlConn"].ToString();
+            string sqlConString = //ConfigurationManager.ConnectionStrings["SqlConn"].ToString();
+                "Server=(localdb)\\MSSQLLocalDB;Database=AdventureWorks2014;Trusted_Connection=True;MultipleActiveResultSets=true";
             return new SqlConnection(sqlConString);
         }
 
