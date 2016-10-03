@@ -9,16 +9,16 @@ namespace AdventureWorks.Models
     {
         public int SalesOrderID { get; set; }
 
-        [Display(Name = "SO #")]
+        [Display(Name = "Sales Order")]
         public string SalesOrderNumber { get; set; }
 
-        [Display(Name = "PO #")]
+        [Display(Name = "Purchase Order")]
         public string PurchaseOrderNumber { get; set; }
 
-        [Display(Name = "Acct #")]
+        [Display(Name = "Account")]
         public string AccountNumber { get; set; }
 
-        [Display(Name = "Customer #")]
+        [Display(Name = "Customer ID")]
         public int CustomerID { get; set; }
 
         [Display(Name = "Created")]

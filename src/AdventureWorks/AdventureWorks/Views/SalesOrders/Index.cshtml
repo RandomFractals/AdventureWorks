@@ -7,12 +7,8 @@
 <h2>Sales Orders</h2>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.SalesOrderNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AccountNumber)
-        </th>
+        <th>Sales Order</th>
+        <th>Shipping</th>
         <th>
             @Html.DisplayNameFor(model => model.ShipDate)
         </th>        
@@ -38,11 +34,15 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        <td width="240px">
+            @Html.DisplayNameFor(model => model.SalesOrderNumber):
             <a href="SalesOrders/GetOrderDetails#@item.SalesOrderID">@item.SalesOrderNumber</a>
-        </td>
-        <td>
+            <br />
+            @Html.DisplayNameFor(model => model.AccountNumber):
             @Html.DisplayFor(modelItem => item.AccountNumber)
+            <br />
+            @Html.DisplayNameFor(model => model.CustomerID):
+            @Html.DisplayFor(modelItem => item.CustomerID)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ShipDate)
