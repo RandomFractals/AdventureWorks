@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using AdventureWorks.Models.SalesOrder;
+using AdventureWorks.Repository;
+
+
 namespace AdventureWorks.Controllers
 {
     public class SalesOrdersController : Controller
@@ -11,7 +15,9 @@ namespace AdventureWorks.Controllers
         // GET: SalesOrders
         public ActionResult Index()
         {
-            return View();
+            ISalesOrdersRepository ordersRepo = new DapperSalesOrdersRepository();
+
+            return View(ordersRepo.GetSalesOrders());
         }
     }
 }
