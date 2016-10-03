@@ -8,15 +8,6 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.OrderDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DueDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShipDate)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.SalesOrderNumber)
         </th>
         <th>
@@ -28,6 +19,15 @@
         <th>
             @Html.DisplayNameFor(model => model.CustomerID)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DueDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipDate)
+        </th>        
         <th>
             @Html.DisplayNameFor(model => model.ShipToAddressID)
         </th>
@@ -55,15 +55,6 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.OrderDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DueDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShipDate)
-        </td>
-        <td>
             <a href="SalesOrders/GetOrderDetails#@item.SalesOrderID">@item.SalesOrderNumber</a>
         </td>
         <td>
@@ -76,10 +67,19 @@
             @Html.DisplayFor(modelItem => item.CustomerID)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ShipToAddressID)
+            @Html.DisplayFor(modelItem => item.OrderDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DueDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShipDate)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ShipMethodID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShipToAddressID)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.SubTotal)
@@ -95,11 +95,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ModifiedDate)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.SalesOrderID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.SalesOrderID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.SalesOrderID })
         </td>
     </tr>
 }

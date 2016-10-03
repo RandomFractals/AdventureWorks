@@ -9,6 +9,18 @@ namespace AdventureWorks.Models.SalesOrder
     {
         public int SalesOrderID { get; set; }
 
+        [Display(Name = "SO #")]
+        public string SalesOrderNumber { get; set; }
+
+        [Display(Name = "PO #")]
+        public string PurchaseOrderNumber { get; set; }
+
+        [Display(Name = "Acct #")]
+        public string AccountNumber { get; set; }
+
+        [Display(Name = "Customer #")]
+        public int CustomerID { get; set; }
+
         [Display(Name = "Created")]
         public DateTime OrderDate { get; set; }
 
@@ -18,19 +30,10 @@ namespace AdventureWorks.Models.SalesOrder
         [Display(Name = "Ship")]
         public DateTime ShipDate { get; set; }
 
-        [Display(Name = "#")]
-        public string SalesOrderNumber { get; set; }
-
-        [Display(Name = "PO #")]
-        public string PurchaseOrderNumber { get; set; }
-
-        [Display(Name = "Acct #")]
-        public string AccountNumber { get; set; }
-
-        public int CustomerID { get; set; }
-
+        [Display(Name = "Ship To")]
         public int ShipToAddressID { get; set; }
 
+        [Display(Name = "Via")]
         public int ShipMethodID { get; set; }
 
         [Display(Name = "SubTotal ($)")]
