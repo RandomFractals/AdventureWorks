@@ -16,5 +16,5 @@ Open .src/AdventureWorks/AdventureWorks.sln in your VS2015, build and run!
 
 # Latest Build View :(
 
-![Alt text](https://github.com/RandomFractals/AdventureWorks/blob/master/screens/AWSO-0.0.1-ListTrim2.png
+![Alt text](https://github.com/RandomFractals/AdventureWorks/blob/master/screens/AWSO-0.0.1-ListTrim3.png
  "It's a start!")
