@@ -155,6 +155,7 @@
     <Compile Include="Models\SalesOrder.cs" />
     <Compile Include="Models\SalesOrderDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\DapperSalesOrderRepository.cs" />
     <Compile Include="Repository\ISalesOrdersRepository.cs" />
   </ItemGroup>
   <ItemGroup>
