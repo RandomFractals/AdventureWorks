@@ -12,12 +12,21 @@ namespace AdventureWorks.Controllers
 {
     public class SalesOrdersController : Controller
     {
+        // [FromServices] // note: something changed here since .net 5 alpha for inject
+        //public ISalesOrdersRepository SalesOrdersRepository { get; set; }
+
+        private ISalesOrdersRepository _ordersRepo { get; set; }
+
+        public SalesOrdersController()
+        {
+            // init dapper repo direct for now
+            this._ordersRepo = new DapperSalesOrdersRepository();
+        }
+
         // GET: SalesOrders
         public ActionResult Index()
         {
-            ISalesOrdersRepository ordersRepo = new DapperSalesOrdersRepository();
-
-            return View(ordersRepo.GetSalesOrders());
+            return View(this._ordersRepo.GetSalesOrders());
         }
     }
 }
