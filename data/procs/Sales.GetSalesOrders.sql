@@ -14,7 +14,7 @@ GO
 CREATE PROCEDURE [dbo].[SalesGetSalesOrders]
 AS
 BEGIN
-SELECT TOP (20) Orders.SalesOrderID, 
+SELECT TOP (10) Orders.SalesOrderID, 
 		Orders.OrderDate, 
 		Orders.DueDate, 
 		Orders.ShipDate, 
