@@ -64,7 +64,7 @@
             @Html.DisplayFor(modelItem => item.ShipDate)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.SalesOrderNumber)
+            <a asp-action="GetOrderDetails" asp-route-id="@item.SalesOrderID">@item.SalesOrderNumber</a>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.PurchaseOrderNumber)
