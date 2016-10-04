@@ -15,7 +15,7 @@ namespace AdventureWorks.Models
         [Display(Name = "purchase order")]
         public string PurchaseOrderNumber { get; set; }
 
-        [Display(Name = "account")]
+        [Display(Name = "account #")]
         public string AccountNumber { get; set; }
 
         // TODO: see how moving these to Customer.cs works with Dapper mapping
