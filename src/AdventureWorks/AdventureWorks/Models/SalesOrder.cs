@@ -21,9 +21,7 @@ namespace AdventureWorks.Models
         // TODO: see how moving these to Customer.cs works with Dapper mapping
         [Display(Name = "customer")]
         public int CustomerID { get; set; }
-
         public string FirstName { get; set; }
-
         public string LastName { get; set; }
 
         [Display(Name = "created")]
@@ -49,6 +47,13 @@ namespace AdventureWorks.Models
 
         [Display(Name = "via")]
         public string ShipMethodName { get; set; }
+
+        // TODO: move these to Address.cs
+        public string AddressLine1 { get; set; }
+        public string City { get; set;  }
+        public string StateProvinceCode { get; set; }
+        public string PostalCode { get; set; }
+        public string CountryRegionCode { get; set; }
 
 
         [Display(Name = "subtotal")]

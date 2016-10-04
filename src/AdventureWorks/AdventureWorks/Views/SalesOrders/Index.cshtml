@@ -43,6 +43,12 @@
                 @Html.DisplayNameFor(model => model.ShipToAddressID):
             </span>
             @Html.DisplayFor(modelItem => item.ShipToAddressID)
+            @Html.DisplayFor(modelItem => item.AddressLine1)
+            <br />
+            @Html.DisplayFor(modelItem => item.City),
+            @Html.DisplayFor(modelItem => item.StateProvinceCode),
+            @Html.DisplayFor(modelItem => item.PostalCode),
+            @Html.DisplayFor(modelItem => item.CountryRegionCode)
             <br />
             <span class="label">
                 @Html.DisplayNameFor(model => model.ShipMethodID):
