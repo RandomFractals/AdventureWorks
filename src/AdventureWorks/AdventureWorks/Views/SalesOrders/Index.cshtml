@@ -35,11 +35,6 @@
         <td>
             <!-- shipping info -->
             <span class="label">
-                @Html.DisplayNameFor(model => model.ShipDate):
-            </span>
-            @Html.DisplayFor(modelItem => item.ShipDate)
-            <br />
-            <span class="label">
                 @Html.DisplayNameFor(model => model.ShipToAddressID):
             </span>
             @Html.DisplayFor(modelItem => item.ShipToAddressID)
@@ -54,6 +49,11 @@
                 @Html.DisplayNameFor(model => model.ShipMethodID):
             </span>
             @Html.DisplayFor(modelItem => item.ShipMethodName)
+            <br />
+            <span class="label">
+                @Html.DisplayNameFor(model => model.ShipDate):
+            </span>
+            @Html.DisplayFor(modelItem => item.ShipDate)
         </td>
         <td>
             <!-- cost -->
