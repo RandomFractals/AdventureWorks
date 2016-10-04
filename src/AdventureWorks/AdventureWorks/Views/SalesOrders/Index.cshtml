@@ -17,9 +17,10 @@
         <td width="240px">
             <!-- sales order info -->
             <span class="label">
-                @Html.DisplayNameFor(model => model.SalesOrderNumber):
+                @Html.DisplayNameFor(model => model.CustomerID):
             </span>
-            <a href="SalesOrders/GetOrderDetails#@item.SalesOrderID">@item.SalesOrderNumber</a>
+            @Html.DisplayFor(modelItem => item.FirstName)
+            @Html.DisplayFor(modelItem => item.LastName)
             <br />
             <span class="label">
                 @Html.DisplayNameFor(model => model.AccountNumber):
@@ -27,10 +28,9 @@
             @Html.DisplayFor(modelItem => item.AccountNumber)
             <br />
             <span class="label">
-                @Html.DisplayNameFor(model => model.CustomerID):
+                @Html.DisplayNameFor(model => model.SalesOrderNumber):
             </span>
-            @Html.DisplayFor(modelItem => item.FirstName)
-            @Html.DisplayFor(modelItem => item.LastName)
+            <a href="SalesOrders/GetOrderDetails#@item.SalesOrderID">@item.SalesOrderNumber</a>
         </td>
         <td>
             <!-- shipping info -->

@@ -9,7 +9,7 @@ namespace AdventureWorks.Models
     {
         public int SalesOrderID { get; set; }
 
-        [Display(Name = "order")]
+        [Display(Name = "order #")]
         public string SalesOrderNumber { get; set; }
 
         [Display(Name = "purchase order")]
@@ -19,7 +19,7 @@ namespace AdventureWorks.Models
         public string AccountNumber { get; set; }
 
         // TODO: see how moving these to Customer.cs works with Dapper mapping
-        [Display(Name = "customer")]
+        [Display(Name = "for")]
         public int CustomerID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
