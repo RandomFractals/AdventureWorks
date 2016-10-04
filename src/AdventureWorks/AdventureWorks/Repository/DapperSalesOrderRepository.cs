@@ -17,9 +17,9 @@ namespace AdventureWorks.Repository
 	{
         private SqlConnection GetConnection()
         {
-            string sqlConString = //ConfigurationManager.ConnectionStrings["SqlConn"].ToString();
+            string sqlConnectionString = //ConfigurationManager.ConnectionStrings["SqlConn"].ToString();
                 "Server=(localdb)\\MSSQLLocalDB;Database=AdventureWorks2014;Trusted_Connection=True;MultipleActiveResultSets=true";
-            return new SqlConnection(sqlConString);
+            return new SqlConnection(sqlConnectionString);
         }
 
         // TODO: add query and pagination params
@@ -27,10 +27,10 @@ namespace AdventureWorks.Repository
         {
             try
             {
-                SqlConnection connect = this.GetConnection();
+                SqlConnection sqlConnection = this.GetConnection();
                 IList<SalesOrder> orderList = SqlMapper.Query<SalesOrder>(
-                    connect, "SalesGetSalesOrders").ToList();
-                connect.Close();
+                    sqlConnection, "SalesGetSalesOrders").ToList();
+                sqlConnection.Close();
                 return orderList.ToList();
             }
             catch (Exception)
@@ -44,12 +44,14 @@ namespace AdventureWorks.Repository
         {
             try
             {
-                DynamicParameters param = new DynamicParameters();
-                param.Add("SalesOrderID", orderId);
-                SqlConnection connect = this.GetConnection();
-                IList<SalesOrderDetails> orderList = SqlMapper.Query<SalesOrderDetails>(
-                    connect, "SalesGetSalesOrderDetails", param).ToList();
-                connect.Close();
+                DynamicParameters parameters = new DynamicParameters();
+                parameters.Add("@SalesOrderID", orderId);
+                SqlConnection sqlConnection = this.GetConnection();
+                IList<SalesOrderDetails> orderList = 
+                    sqlConnection.Query<SalesOrderDetails>(
+                    "SalesGetSalesOrderDetails", parameters,
+                    commandType: CommandType.StoredProcedure).ToList();
+                sqlConnection.Close();
                 return orderList.ToList();
             }
             catch (Exception)
