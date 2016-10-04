@@ -21,6 +21,10 @@ namespace AdventureWorks.Models
         [Display(Name = "customer")]
         public int CustomerID { get; set; }
 
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
+
         [Display(Name = "created")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
