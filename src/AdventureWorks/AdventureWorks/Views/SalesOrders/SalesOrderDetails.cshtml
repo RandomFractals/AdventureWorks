@@ -1,14 +1,11 @@
 ﻿@model IEnumerable<AdventureWorks.Models.SalesOrderDetails>
 
 @{
-    ViewBag.Title = "SalesOrderDetails";
+    ViewBag.Title = "sales order details";
 }
 
-<h2>SalesOrderDetails</h2>
+<h2>sales order details</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -74,3 +71,8 @@
 }
 
 </table>
+
+<p>
+    @Html.ActionLink("back to Sales Orders", "")
+</p>
+
