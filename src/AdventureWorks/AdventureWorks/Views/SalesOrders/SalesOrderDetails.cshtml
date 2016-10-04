@@ -9,19 +9,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.SalesOrderID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SalesOrderDetailID)
-        </th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>        
         <th>
             @Html.DisplayNameFor(model => model.OrderQty)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ProductID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ProductName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.UnitPrice)
@@ -32,28 +23,15 @@
         <th>
             @Html.DisplayNameFor(model => model.LineTotal)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ListPrice)
-        </th>
-        <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.SalesOrderID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SalesOrderDetailID)
+            @Html.DisplayFor(modelItem => item.ProductName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.OrderQty)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProductID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProductName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.UnitPrice)
@@ -63,9 +41,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.LineTotal)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ListPrice)
         </td>
     </tr>
 }
