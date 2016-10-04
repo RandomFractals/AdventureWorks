@@ -18,6 +18,7 @@ namespace AdventureWorks.Models
         [Display(Name = "account")]
         public string AccountNumber { get; set; }
 
+        // TODO: see how moving these to Customer.cs works with Dapper mapping
         [Display(Name = "customer")]
         public int CustomerID { get; set; }
 
