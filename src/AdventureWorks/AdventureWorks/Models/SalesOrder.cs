@@ -9,7 +9,7 @@ namespace AdventureWorks.Models
     {
         public int SalesOrderID { get; set; }
 
-        [Display(Name = "sales order")]
+        [Display(Name = "order")]
         public string SalesOrderNumber { get; set; }
 
         [Display(Name = "purchase order")]
@@ -18,7 +18,7 @@ namespace AdventureWorks.Models
         [Display(Name = "account")]
         public string AccountNumber { get; set; }
 
-        [Display(Name = "customer ID")]
+        [Display(Name = "customer")]
         public int CustomerID { get; set; }
 
         [Display(Name = "created")]
