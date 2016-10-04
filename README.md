@@ -18,3 +18,10 @@ Open .src/AdventureWorks/AdventureWorks.sln in your VS2015, build and run!
 
 ![Alt text](https://github.com/RandomFractals/AdventureWorks/blob/master/screens/AWSO-ShipUX.png
  "It's a start!")
+ 
+ # Sales Order Details View
+ 
+ [Alt text](https://github.com/RandomFractals/AdventureWorks/blob/master/screens/AWSOD-ListViewTake1.png
+ "Take 1")
+ 
+ 
