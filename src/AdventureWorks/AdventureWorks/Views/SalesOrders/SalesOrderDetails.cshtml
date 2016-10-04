@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<AdventureWorks.Models.SalesOrderDetails>
 
 @{
-    ViewBag.Title = "sales order details";
+    ViewBag.Title = "order details";
 }
 
-<h3>sales order details | SO @Request.QueryString[0]</h3>
+<h3>order details: # @Request.QueryString[0]</h3>
 
 <table class="table">
     <tr>
