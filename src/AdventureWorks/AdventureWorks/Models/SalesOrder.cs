@@ -47,6 +47,10 @@ namespace AdventureWorks.Models
         [Display(Name = "via")]
         public int ShipMethodID { get; set; }
 
+        [Display(Name = "via")]
+        public string ShipMethodName { get; set; }
+
+
         [Display(Name = "subtotal")]
         [DisplayFormat(DataFormatString = "{0:C}")]
         public decimal SubTotal { get; set; }
