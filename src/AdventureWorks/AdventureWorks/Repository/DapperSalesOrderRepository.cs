@@ -42,7 +42,20 @@ namespace AdventureWorks.Repository
 
         public List<SalesOrderDetails> GetSalesOrderDetails(int orderId)
         {
-            return null; 
+            try
+            {
+                DynamicParameters param = new DynamicParameters();
+                param.Add("SalesOrderID", orderId);
+                SqlConnection connect = this.GetConnection();
+                IList<SalesOrderDetails> orderList = SqlMapper.Query<SalesOrderDetails>(
+                    connect, "SalesGetSalesOrderDetails", param).ToList();
+                connect.Close();
+                return orderList.ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
     }
