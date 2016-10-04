@@ -30,7 +30,7 @@ namespace AdventureWorks.Controllers
         }
 
         // GET: SalesOrderDetails
-        public ActionResult GetOrderDetails(int orderId)
+        public ActionResult SalesOrderDetails(int orderId)
         {
             return View( this._ordersRepo.GetSalesOrderDetails(orderId) );
         }

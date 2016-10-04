@@ -30,7 +30,7 @@
             <span class="label">
                 @Html.DisplayNameFor(model => model.SalesOrderNumber):
             </span>
-            <a href="SalesOrders/GetOrderDetails#@item.SalesOrderID">@item.SalesOrderNumber</a>
+            <a href="SalesOrders/SalesOrderDetails?orderId=@item.SalesOrderID">@item.SalesOrderNumber</a>
         </td>
         <td>
             <!-- shipping info -->
