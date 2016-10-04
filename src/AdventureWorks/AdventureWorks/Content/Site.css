@@ -30,3 +30,8 @@ textarea {
 .card-row {
     border: 1px solid #999;
 }
+
+hr {
+
+    margin: 5px;
+}
