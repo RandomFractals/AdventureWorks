@@ -14,12 +14,12 @@ https://msftdbprodsamples.codeplex.com/releases/view/125550
 
 Open .src/AdventureWorks/AdventureWorks.sln in your VS2015, build and run!
 
-# Latest Build View :(
+# Orders List View (adding search and pagination next :)
 
 ![Alt text](https://github.com/RandomFractals/AdventureWorks/blob/master/screens/AWSOL2.png
  "It's a start!")
  
-# Sales Order Details View
+# Order Details View
  
 ![Alt text](https://github.com/RandomFractals/AdventureWorks/blob/master/screens/AWSODL2.png
  "Take 1")
