@@ -1,53 +1,56 @@
 ﻿@model IEnumerable<AdventureWorks.Models.SalesOrderDetails>
-
 @{
     ViewBag.Title = "order details";
 }
+<br />
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">order details: # @Request.QueryString[0]</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderQty)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UnitPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UnitPriceDiscount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LineTotal)
+                </th>
+            </tr>
 
-<h3>order details: # @Request.QueryString[0]</h3>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderQty)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UnitPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UnitPriceDiscount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LineTotal)
+                    </td>
+                </tr>
+            }
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ProductName)
-        </th>        
-        <th>
-            @Html.DisplayNameFor(model => model.OrderQty)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UnitPrice)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UnitPriceDiscount)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LineTotal)
-        </th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProductName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OrderQty)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UnitPrice)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UnitPriceDiscount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LineTotal)
-        </td>
-    </tr>
-}
-
-</table>
-
-<p>
-    @Html.ActionLink("back to orders", "")
-</p>
-
+        </table>
+    </div>
+    <div class="panel-footer">
+        @Html.ActionLink("back to orders", "")
+    </div>
+</div>
