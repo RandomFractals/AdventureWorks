@@ -16,12 +16,12 @@ Open .src/AdventureWorks/AdventureWorks.sln in your VS2015, build and run!
 
 # Latest Build View :(
 
-![Alt text](https://github.com/RandomFractals/AdventureWorks/blob/master/screens/AWSO-ShipUX.png
+![Alt text](https://github.com/RandomFractals/AdventureWorks/blob/master/screens/AWSOL2.png
  "It's a start!")
  
 # Sales Order Details View
  
-![Alt text](https://github.com/RandomFractals/AdventureWorks/blob/master/screens/AWSOD-Panel.png
+![Alt text](https://github.com/RandomFractals/AdventureWorks/blob/master/screens/AWSODL2.png
  "Take 1")
  
  
