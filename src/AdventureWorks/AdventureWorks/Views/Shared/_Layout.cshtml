@@ -27,19 +27,17 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <span>data:</span>
-            <a href="https://msftdbprodsamples.codeplex.com/releases/view/125550" target="_blank"
-               title="SQL Server Adventure Works 2014">SQL Server Adventure Works 2014</a>
-            |
-            <span>code:</span>
-            <a href="https://github.com/RandomFractals/AdventureWorks" target="_blank"
-               title="RFI/Adventure Works project github">RFI/Adventure Works</a>
-            <span>v. 0.0.1 | &copy;Random Fractals Inc. 2016</span>
-        </footer>
     </div>
-
+    <footer>
+        <span>data:</span>
+        <a href="https://msftdbprodsamples.codeplex.com/releases/view/125550" target="_blank"
+           title="SQL Server Adventure Works 2014">SQL Server Adventure Works 2014</a>
+        |
+        <span>code:</span>
+        <a href="https://github.com/RandomFractals/AdventureWorks" target="_blank"
+           title="RFI/Adventure Works project github">RFI/Adventure Works</a>
+        <span>v. 0.0.1 | &copy;Random Fractals Inc. 2016</span>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
