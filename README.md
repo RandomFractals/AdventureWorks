@@ -21,7 +21,7 @@ Open .src/AdventureWorks/AdventureWorks.sln in your VS2015, build and run!
  
 # Sales Order Details View
  
-![Alt text](https://github.com/RandomFractals/AdventureWorks/blob/master/screens/AWSOD-ListViewTake1.png
+![Alt text](https://github.com/RandomFractals/AdventureWorks/blob/master/screens/AWSOD-Panel.png
  "Take 1")
  
  
