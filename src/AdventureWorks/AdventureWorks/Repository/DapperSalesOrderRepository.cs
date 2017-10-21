@@ -17,19 +17,19 @@ namespace AdventureWorks.Repository
 	{
         private SqlConnection GetConnection()
         {
-            string sqlConnectionString = //ConfigurationManager.ConnectionStrings["SqlConn"].ToString();
-                "Server=(localdb)\\MSSQLLocalDB;Database=AdventureWorks2014;Trusted_Connection=True;MultipleActiveResultSets=true";
+            string sqlConnectionString = ConfigurationManager.ConnectionStrings["AdventureWorks"].ToString();
+            // "Server=(localdb)\\MSSQLLocalDB;Database=AdventureWorks2014;Trusted_Connection=True;MultipleActiveResultSets=true";
             return new SqlConnection(sqlConnectionString);
         }
 
         // TODO: add query and pagination params
-        public List<SalesOrder> GetSalesOrders()
+        public List<SalesOrder> GetSalesOrders(int? customerID = null)
         {
             try
             {
                 SqlConnection sqlConnection = this.GetConnection();
                 IList<SalesOrder> orderList = SqlMapper.Query<SalesOrder>(
-                    sqlConnection, "SalesGetSalesOrders").ToList();
+                    sqlConnection, "EXEC SalesGetSalesOrders @customerId", new { customerID }).ToList();
                 sqlConnection.Close();
                 return orderList.ToList();
             }

@@ -11,7 +11,7 @@ namespace AdventureWorks.Repository
     interface ISalesOrdersRepository
     {
         // TODO: add query and pagination params
-        List<SalesOrder> GetSalesOrders();
+        List<SalesOrder> GetSalesOrders(int? customerID = null);
 
         List<SalesOrderDetails> GetSalesOrderDetails(int orderId);
     }
