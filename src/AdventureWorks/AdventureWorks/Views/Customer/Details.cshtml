@@ -1,0 +1,91 @@
+﻿@model AdventureWorks.Models.Customer
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>@Html.DisplayFor(model => model.Title) @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</h4>
+    <hr />
+    <table class="table">
+        <tr>
+            <th>order info:</th>
+            <th>ship to:</th>
+            <th>cost:</th>
+        </tr>
+
+        @foreach (var item in Model.Orders)
+        {
+            <tr class="card-row">
+                <td width="240px">
+                    <!-- sales order info -->
+                    <span class="label">
+                        @Html.DisplayNameFor(model => item.CustomerID):
+                    </span>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                    @Html.DisplayFor(modelItem => item.LastName)
+                    <br />
+                    <span class="label">
+                        @Html.DisplayNameFor(model => item.AccountNumber):
+                    </span>
+                    @Html.DisplayFor(modelItem => item.AccountNumber)
+                    <br />
+                    <span class="label">
+                        @Html.DisplayNameFor(model => item.SalesOrderNumber):
+                    </span>
+                    <a href="~/SalesOrders/SalesOrderDetails?orderId=@item.SalesOrderID">@item.SalesOrderNumber</a>
+                </td>
+                <td>
+                    <!-- shipping info -->
+                    @Html.DisplayFor(modelItem => item.ShipToAddressID)
+                    @Html.DisplayFor(modelItem => item.AddressLine1)
+                    <br />
+                    @Html.DisplayFor(modelItem => item.City),
+                    @Html.DisplayFor(modelItem => item.StateProvinceCode),
+                    @Html.DisplayFor(modelItem => item.PostalCode),
+                    @Html.DisplayFor(modelItem => item.CountryRegionCode)
+                    <br />
+                    <span class="label">
+                        @Html.DisplayNameFor(model => item.ShipMethodID):
+                    </span>
+                    @Html.DisplayFor(modelItem => item.ShipMethodName)
+                    <br />
+                    <span class="label">
+                        @Html.DisplayNameFor(model => item.ShipDate):
+                    </span>
+                    @Html.DisplayFor(modelItem => item.ShipDate)
+                </td>
+                <td>
+                    <!-- cost -->
+                    <span class="label">
+                        @Html.DisplayNameFor(model => item.SubTotal):
+                    </span>
+                    @Html.DisplayFor(modelItem => item.SubTotal)
+                    <br />
+                    <span class="label">
+                        @Html.DisplayNameFor(model => item.TaxAmount):
+                    </span>
+                    @Html.DisplayFor(modelItem => item.TaxAmount)
+                    <br />
+                    <span class="label">
+                        @Html.DisplayNameFor(model => item.Freight):
+                    </span>
+                    @Html.DisplayFor(modelItem => item.Freight)
+                    <hr />
+                    <span class="label">
+                        @Html.DisplayNameFor(model => item.TotalDue):
+                    </span>
+                    @Html.DisplayFor(modelItem => item.TotalDue)
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -13,6 +13,8 @@ namespace AdventureWorks.Models
 
         public string LastName { get; set; }
 
+        public string Title { get; set; }
 
+        public List<SalesOrder> Orders { get; set; }
     }
 }

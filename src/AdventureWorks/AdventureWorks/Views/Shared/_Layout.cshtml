@@ -16,11 +16,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("adventure works sales", "Index", "SalesOrders", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Sales", "Index", "SalesOrders", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Customers", "Index", "Customer", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("about", "About", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
                 </ul>
             </div>
         </div>
@@ -29,11 +30,24 @@
         @RenderBody()
     </div>
     <footer>
-        <span>data:</span>
+
+        @{ 
+            // Retrieve the ConnectionString from App.config 
+            string connectString = System.Configuration.ConfigurationManager.ConnectionStrings["AdventureWorks"].ToString();
+            var builder = new System.Data.SqlClient.SqlConnectionStringBuilder(connectString);
+            // Retrieve the DataSource property.    
+            string IPAddress = builder.DataSource;
+            string Database = builder.InitialCatalog;
+        }
+        <span>Server:</span>
         <a href="https://msftdbprodsamples.codeplex.com/releases/view/125550" target="_blank"
-           title="SQL Server Adventure Works 2014">SQL Server Adventure Works 2014</a>
+           title="SQL Server Adventure Works 2014">@(IPAddress)</a> |
+
+        <span>Database:</span>
+        <a href="https://msftdbprodsamples.codeplex.com/releases/view/125550" target="_blank"
+           title="SQL Server Adventure Works">@(Database)</a> |
         |
-        <span>code:</span>
+        <span>Source:</span>
         <a href="https://github.com/RandomFractals/AdventureWorks" target="_blank"
            title="RFI/Adventure Works project github">RFI/Adventure Works</a>
         <span>v. 0.0.1 | &copy;Random Fractals Inc. 2016</span>

@@ -11,7 +11,7 @@ IF OBJECT_ID ('[dbo].[SalesGetSalesOrders]', 'P') IS NOT NULL
 	DROP PROCEDURE [dbo].[SalesGetSalesOrders];
 GO
 
-CREATE PROCEDURE [dbo].[SalesGetSalesOrders]
+CREATE PROCEDURE [dbo].[SalesGetSalesOrders] (@customerID int)
 AS
 BEGIN
 SELECT TOP (10) Orders.SalesOrderID, 
@@ -58,5 +58,5 @@ SELECT TOP (10) Orders.SalesOrderID,
 		ON ShipToAddress.StateProvinceID = ProvinceCountryRegion.StateProvinceID
 		INNER JOIN Purchasing.ShipMethod AS ShipMethod
 		ON Orders.ShipMethodID = ShipMethod.ShipMethodID
+	WHERE (@customerID IS NULL) OR Orders.CustomerID = @customerID
 END
-GO
